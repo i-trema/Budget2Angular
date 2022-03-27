@@ -1,0 +1,29 @@
+<div class ="container">
+    <div class = "card">    
+        <div class = "card-body">
+            <form (ngSubmit)="onSubmit()" #budgetForm="ngForm">
+            <table class="table table-striped">
+            <thead>
+            <th>Montant</th>
+            <th>Date</th>
+            <th>Catégorie</th>
+            <th>Commentaire</th>
+            </thead>
+            <tbody>
+            <tr>
+            <td><input name="montant" type="number" [(ngModel)]="budget.montant" #montant="ngModel"/></td>
+            <td><input name="date" type="date" [(ngModel)]="budget.date" #date="ngModel"/></td>
+            <td><input name="categorie" type="text" [(ngModel)]="budget.categorie" #categorie="ngModel"/></td>
+            <td><input name="commentaire" type="text" [(ngModel)]="budget.commentaire" #commentaire="ngModel"/></td>
+            
+            </tr>
+            </tbody>
+            </table>
+            <button type="submit">Envoyer</button>
+        
+        </form>
+        </div>
+    </div>
+    <app-budget-list></app-budget-list>
+
+</div>

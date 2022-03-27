@@ -1,0 +1,35 @@
+<div class ="container">
+    <div class = "card">
+        <h3 class="text-center"> Budget</h3>
+        <div class = "card-body">
+            <table class="table table-striped">
+                <thead>
+                    <th>Id</th>
+                    <th> Montant</th>
+                    <th> Date</th>
+                    <th> Catégorie </th>
+                    <th> Commentaire </th>
+                    <th>  </th>
+                    <th>  </th>
+                    
+                </thead>
+                <tbody>
+                    
+                    <tr *ngFor = "let budget of budgets">
+                        
+                        <td> {{ budget.id}}</td>
+                        <td> {{ budget.montant}} €</td>
+                        <td> {{ budget.date}}</td>
+                        <td> {{ budget.categorie}}</td>
+                        <td> {{ budget.commentaire}}</td>
+                        <td> <button (click)="onSupp(budget.id)">Supprimer</button></td>
+                       
+                        <!-- <td> <button>Supprimer</button></td> -->
+
+                    </tr>
+               
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

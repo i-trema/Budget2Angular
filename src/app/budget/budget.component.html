@@ -1,0 +1,55 @@
+<div class ="container">
+    <div class = "card">
+        <h3 class="text-center"> Budget</h3>
+        <div class = "card-body">
+            <table class="table table-striped">
+                <thead>
+                    <th>Id</th>
+                    <th> Montant</th>
+                    <th> Date</th>
+                    <th> Catégorie </th>
+                    <th> Commentaire </th>
+                    <th>  </th>
+                    <th>  </th>
+                    
+                </thead>
+                <tbody>
+                    <tr *ngFor = "let budget of budgets">
+                        <td> {{ budget.id}}</td>
+                        <td> {{ budget.montant}} €</td>
+                        <td> {{ budget.date}}</td>
+                        <td> {{ budget.categorie}}</td>
+                        <td> {{ budget.commentaire}}</td>
+                        <td> <button >Modifier</button></td>
+                        <td> <button>Supprimer</button></td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class = "card-body">
+        <form action="http://localhost:8080/envoi" method="post">
+            <table class="table table-striped">
+                <thead>
+                <th>Montant</th>
+                <th>Date</th>
+                <th>Catégorie</th>
+                <th>Commentaire</th>
+                </thead>
+                <tbody>
+                <tr>
+                <td><input name="montant" type="number"/></td>
+                <td><input name="date" type="date"/></td>
+                <td><input name="categorie" type="text"/></td>
+                <td><input name="commentaire" type="text"/></td>
+                
+                </tr>
+                </tbody>
+            </table>
+                <button type="submit">Envoyer</button>
+            
+            </form>
+        </div>
+    </div>
+    
+</div>
